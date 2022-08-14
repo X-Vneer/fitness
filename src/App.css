@@ -30,7 +30,7 @@ html {
   font-size: 25px;
   border-radius: 4px;
   position: absolute;
-  bottom: -20px;
+  bottom: -25px;
   right: 80px;
   transform: scale(1, 1);
   transition: 0.3s all ease-in-out;
@@ -101,7 +101,7 @@ html {
 }
 .react-horizontal-scrolling-menu--inner-wrapper {
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
 }
 @media screen and (max-width: 1200px) {
   .detail-image {
@@ -136,6 +136,10 @@ html {
   .exercise-video {
     width: 250px;
     height: 300px;
+  }
+  .right-arrow,
+  .left-arrow {
+    display: none;
   }
 }
 @media screen and (max-width: 500px) {
