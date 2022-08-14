@@ -29,22 +29,26 @@ const SimilarExercises = ({ similarExercises, equipment, targetMuscle }) => {
           same muscle group
         </Typography>
       </Typography>
-      <Stack
-        direction="row"
-        sx={{ p: "5", position: "relative", mt: "50px" }}
-      ></Stack>
-      {SEFSTM && <HorizontalSrollbar data={SEFSTM} />}
-      <Typography variant="h4" p="15px">
-        Exercises that uses the{" "}
-        <Typography color="red" component="span" fontSize="inherit">
-          same equipment
+      <div style={{ position: "relative", marginBottom: "50px" }}>
+        <Stack
+          direction="row"
+          sx={{ p: "5", position: "relative", mt: "50px" }}
+        ></Stack>
+        {SEFSTM && <HorizontalSrollbar data={SEFSTM} />}
+      </div>
+      <div style={{ position: "relative", marginBottom: "50px" }}>
+        <Typography variant="h4" p="15px">
+          Exercises that uses the{" "}
+          <Typography color="red" component="span" fontSize="inherit">
+            same equipment
+          </Typography>
         </Typography>
-      </Typography>
-      <Stack
-        direction="row"
-        sx={{ p: "5", position: "relative", mt: "50px" }}
-      ></Stack>
-      {SEUSE && <HorizontalSrollbar data={SEUSE} />}
+        <Stack
+          direction="row"
+          sx={{ p: "5", position: "relative", mt: "50px" }}
+        ></Stack>
+        {SEUSE && <HorizontalSrollbar data={SEUSE} />}
+      </div>
     </Box>
   );
 };

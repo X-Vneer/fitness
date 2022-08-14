@@ -97,7 +97,7 @@ html {
   max-height: 218px;
 }
 .react-horizontal-scrolling-menu--scroll-container {
-  width: 100% !important;
+  width: 1200px !important;
 }
 .react-horizontal-scrolling-menu--inner-wrapper {
   margin: 0 auto;
