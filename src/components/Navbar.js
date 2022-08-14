@@ -20,7 +20,7 @@ function Navbar() {
         px: "20px",
       }}
     >
-      <Link to="/">
+      <Link to="/fitness">
         <img
           src={logo}
           alt="logo"
@@ -44,7 +44,7 @@ function Navbar() {
         alignItems="center"
       >
         <Link
-          to="/"
+          to="/fitness"
           style={{
             textDecoration: "none",
             color: "#3a1212",
