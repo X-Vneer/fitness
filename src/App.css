@@ -97,7 +97,7 @@ html {
   max-height: 218px;
 }
 .react-horizontal-scrolling-menu--scroll-container {
-  width: 1190px;
+  width: 1190px !important;
 }
 .react-horizontal-scrolling-menu--inner-wrapper {
   margin: 0 auto;
@@ -116,7 +116,7 @@ html {
     height: 300px;
   }
   .react-horizontal-scrolling-menu--scroll-container {
-    width: 90vw;
+    width: 90vw !important;
   }
 }
 @media screen and (max-width: 900px) {
@@ -124,7 +124,7 @@ html {
     display: none;
   }
   .react-horizontal-scrolling-menu--scroll-container {
-    width: 85vw;
+    width: 85vw !important;
   }
 }
 
@@ -143,6 +143,6 @@ html {
     height: auto;
   }
   .react-horizontal-scrolling-menu--scroll-container {
-    width: 80vw;
+    width: 80vw !important;
   }
 }
