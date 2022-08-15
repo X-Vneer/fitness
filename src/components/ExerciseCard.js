@@ -13,7 +13,7 @@ const ExerciseCard = ({ exercise }) => {
       state={{ exercise, searchedExercises }}
       className="exercise-card"
     >
-      <img src={exercise.gifUrl} alt={`${exercise.name}`} />
+      <img src={exercise.gifUrl} alt={`${exercise.name}`} loading="lazy" />
       <Stack direction="row">
         <Button
           variant="contained"
