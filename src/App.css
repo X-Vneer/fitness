@@ -151,3 +151,8 @@ html {
     width: 80vw !important;
   }
 }
+@media (max-width: 768px) {
+  * {
+    cursor: default !important;
+  }
+}
