@@ -4,7 +4,7 @@ I have used the Rapid API [ExerciseDB](https://rapidapi.com/justin-WFnsXH_t6/api
 
 ##### download the repo and run `npm install` to download all the dependency needed to start modifying the project.
 
-have a look at the website [here](https://x-vneer.github.io/fitness/)
+have a look at the website [here](https://x-vneer-fitness.netlify.app/)
 
 #### important
 
