@@ -1,13 +1,18 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import { fetchData, options } from "../utils/fetchData";
-import { ExercisesContext, SearchExercisesContext } from "../Pages/Home";
+import {
+  ExercisesContext,
+  searchExercisesContext,
+  isLoadingSearchExercises,
+} from "../Pages/Home";
 
 import HorizontalSrollbar from "./HorizontalSrollbar";
 
 const SearchExercises = () => {
   const [exercisesData, setExercisesData] = useContext(ExercisesContext);
-  const [, setExercises] = useContext(SearchExercisesContext);
+  const [, setIsLoading] = useContext(isLoadingSearchExercises);
+  const [, setExercises] = useContext(searchExercisesContext);
 
   const [search, setSearch] = useState("");
   const searchButton = useRef(null);
@@ -76,8 +81,8 @@ const SearchExercises = () => {
         if (exercisesData) {
           setExercisesData(exercisesData);
           setExercises(exercisesData);
-          // console.log(exercisesData);
         }
+        setIsLoading(false);
       }
     };
     fetchExercisesData();

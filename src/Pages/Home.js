@@ -8,7 +8,8 @@ import { createContext, useState } from "react";
 
 export const ExercisesContext = createContext(null);
 export const bodyPartContext = createContext("all");
-export const SearchExercisesContext = createContext([]);
+export const searchExercisesContext = createContext([]);
+export const isLoadingSearchExercises = createContext(true);
 
 const Home = () => {
   return (
@@ -16,12 +17,14 @@ const Home = () => {
       <HeroBanner />
       <ExercisesContext.Provider value={useState([])}>
         <bodyPartContext.Provider value={useState("all")}>
-          <SearchExercisesContext.Provider value={useState([])}>
-            {/*  */}
-            <SearchExercises />
-            <Exercises />
-            {/*  */}
-          </SearchExercisesContext.Provider>
+          <searchExercisesContext.Provider value={useState([])}>
+            <isLoadingSearchExercises.Provider value={useState(true)}>
+              {/*  */}
+              <SearchExercises />
+              <Exercises />
+              {/*  */}
+            </isLoadingSearchExercises.Provider>
+          </searchExercisesContext.Provider>
         </bodyPartContext.Provider>
       </ExercisesContext.Provider>
     </Box>

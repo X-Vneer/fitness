@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Button, Stack, Typography } from "@mui/material";
 
-import { SearchExercisesContext } from "../Pages/Home";
+import { searchExercisesContext } from "../Pages/Home";
 
 const ExerciseCard = ({ exercise }) => {
-  const [searchedExercises] = useContext(SearchExercisesContext);
+  const [searchedExercises] = useContext(searchExercisesContext);
   return (
     <Link
       onClick={() => window.scrollTo({ top: "0", behavior: "smooth" })}

@@ -1,11 +1,15 @@
 import React, { useContext, useState } from "react";
 import { Pagination, Box, Stack, Typography } from "@mui/material";
 import ExerciseCard from "./ExerciseCard";
-import { SearchExercisesContext } from "../Pages/Home";
+import {
+  searchExercisesContext,
+  isLoadingSearchExercises,
+} from "../Pages/Home";
 import Loader from "./Loader";
 
 const Exercises = () => {
-  const [exercises] = useContext(SearchExercisesContext);
+  const [exercises] = useContext(searchExercisesContext);
+  const [isLoading] = useContext(isLoadingSearchExercises);
 
   const [currentPage, setCurrentPage] = useState(1);
   const exercisesPerPage = 9;
@@ -26,7 +30,15 @@ const Exercises = () => {
       >
         Showing Results
       </Typography>
-      {!exercises.length && <Loader />}
+      {isLoading && <Loader />}
+      {!isLoading && !exercises.length && (
+        <Typography marginBottom="60px" maxWidth="540px" marginX="auto">
+          <Typography variant="h4" color="#FF2625">
+            No Results!
+          </Typography>
+          sorry but we can not seem to have any results for this search.
+        </Typography>
+      )}
       <Stack
         direction="row"
         gap={{ lg: "110px", xs: "50px" }}
